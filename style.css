@@ -1,0 +1,57 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100);
+
+body{
+    font-family: 'roboto';
+    font-weight: 100;
+    display: flex;
+    justify-content: center;
+    margin-top: 15vh;
+    font-size: 2em;
+    background-color: #4b4b4b;
+}
+#calculator{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 300px;
+    border: 1px solid #2222226b;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.result{
+    width: 100%;
+    background-color: #222;
+    min-height: 6rem;
+    color: white;
+}
+.result p{
+    padding: 0 1em;
+    text-align: right;
+    line-height: 2em;
+}
+span{
+    text-align: center;
+    cursor: pointer;
+    width: 73px;
+    background-color: rgb(110, 109, 109);
+    line-height: 2em;
+    border: 0.01px solid #2222226b;
+    color: white;
+}
+.operator{
+    background-color: #ff9500;
+    color: white;
+    font-weight: 800;
+}
+.double{
+    width: 148px;
+}
+.operator0{
+    background-color: #303030ab;
+}
+.clear{
+    background-color: #303030ab;
+}
+.dot{
+    font-weight: bold;
+}
