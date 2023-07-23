@@ -93,9 +93,39 @@ dot.textContent=`.`
 calculator.appendChild(dot);
 
 const operator6 = document.createElement("span");
-operator6.setAttribute("class", "operator");
+operator6.setAttribute("class", "operator6");
 operator6.textContent=`=`
 calculator.appendChild(operator6);
 
 // calculator working concept {working on Progress}
 
+window.onload = function(){
+    const button = document.getElementsByClassName("span");
+    const result = document.querySelectorAll(".result p");
+    const clear = document.getElementsByClassName("clear");
+    let equation = "";
+
+    button.addEventListener("click", (event) => {
+      const {target} = event;
+
+      if (!target.matches("button")) return;
+      const buttons = target;
+      const buttonvalue = buttons.textContent;
+      const operatorvalue = buttons.value;
+
+      if (buttons.classlist.contains("operator")){
+        handleoperator(operatorvalue);
+
+      } else if (buttons.classList.contains("dot")) {
+        handleDecimal();
+      } else if (buttons.classList.contains("clear")){
+        handleClear();
+      } else if (buttons.classList.contains("operator6")) {
+        evaluteExpression();
+      } else {
+        appendToExpression(keyValue);
+      }
+  
+      updateScreen();
+    })
+  }
