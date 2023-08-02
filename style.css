@@ -60,3 +60,13 @@ span{
 .dot{
     font-weight: bold;
 }
+
+span:hover{
+ background-color: #555;   
+}
+.operator:hover{
+    background-color: #ff6600;
+}
+.operator6:hover{
+    background-color: #ff6600;
+}
