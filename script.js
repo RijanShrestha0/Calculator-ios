@@ -99,85 +99,85 @@ calculator.appendChild(operator6);
 
 // calculator working concept {working on Progress}
 
-window.onload = function(){
-    const button = document.getElementsByClassName("span");
-    const result = document.querySelectorAll(".result p");
-    const clear = document.getElementsByClassName("clear");
-    let equation = "";
+// window.onload = function(){
+//     const button = document.getElementsByClassName("span");
+//     const result = document.querySelectorAll(".result p");
+//     const clear = document.getElementsByClassName("clear");
+//     let equation = "";
 
-    button.addEventListener("click", (event) => {
-      const {target} = event;
+//     button.addEventListener("click", (event) => {
+//       const {target} = event;
 
-      if (!target.matches("button")) return;
-      const buttons = target;
-      const buttonvalue = buttons.textContent;
-      const operatorvalue = buttons.value;
+//       if (!target.matches("button")) return;
+//       const buttons = target;
+//       const buttonvalue = buttons.textContent;
+//       const operatorvalue = buttons.value;
 
-      if (buttons.classlist.contains("operator")){
-        handleoperator(operatorvalue);
+//       if (buttons.classlist.contains("operator")){
+//         handleoperator(operatorvalue);
 
-      } else if (buttons.classList.contains("dot")) {
-        handleDecimal();
-      } else if (buttons.classList.contains("clear")){
-        handleClear();
-      } else if (buttons.classList.contains("operator")) {
-        evaluteExpression();
-      } else {
-        appendToExpression(keyValue);
-      }
+//       } else if (buttons.classList.contains("dot")) {
+//         handleDecimal();
+//       } else if (buttons.classList.contains("clear")){
+//         handleClear();
+//       } else if (buttons.classList.contains("operator")) {
+//         evaluteExpression();
+//       } else {
+//         appendToExpression(keyValue);
+//       }
   
-      updateScreen();
-    })
-    for (let i = 0; i < button.length; i += 1){
-        if (button[i].innerHTML === 'x'){
-            button[i].addEventListener("click", calculate(i));
-        }else if (button[i].innerHTML === '+/-'){
-            button[i].addEventListener("click", invert(i));
-        }else if (button[i].innerHTML === '%') {
-            button[i].addEventListener("click", percent(i));
-        } else if (button[i].innerHTML === 'AC') {
-            equation = [];
-        } else {
-            button[i].addEventListener("click", addValue(i));
-        }
-    }
-    clear.onclick = function() {
-        result.innerHTML = '';
-        equation = [];
-        operator = false;
-      }
-      function addValue(i){
-        return function(){
-            if (button[i].innerHTML === "+") {
-              button.addEventListener("click", )
+//       updateScreen();
+//     })
+//     for (let i = 0; i < button.length; i += 1){
+//         if (button[i].innerHTML === 'x'){
+//             button[i].addEventListener("click", calculate(i));
+//         }else if (button[i].innerHTML === '+/-'){
+//             button[i].addEventListener("click", invert(i));
+//         }else if (button[i].innerHTML === '%') {
+//             button[i].addEventListener("click", percent(i));
+//         } else if (button[i].innerHTML === 'AC') {
+//             equation = [];
+//         } else {
+//             button[i].addEventListener("click", addValue(i));
+//         }
+//     }
+//     clear.onclick = function() {
+//         result.innerHTML = '';
+//         equation = [];
+//         operator = false;
+//       }
+//       function addValue(i){
+//         return function(){
+//             if (button[i].innerHTML === "+") {
+//               button.addEventListener("click", )
 
-              clicked(this);
-                ifOperatorThanSwap('/')
-            } else if (button[i].innerHTML === 'x') {
-                clicked(this);
-                ifOperatorThanSwap('*');
-              } else if (button[i].innerHTML === '+') {
-                clicked(this);
-                ifOperatorThanSwap('+');
-              } else if (button[i].innerHTML === '-') {
-                clicked(this);
-                ifOperatorThanSwap('-');
-              }else {
-                removeClicked();
-                if (checkIfNum(equation[equation.length - 1])) {
-                  equation = [];
-                  equation.push(button[i].innerHTML);
-                  operator = true;
-                }else {
-                  equation.push(button[i].innerHTML);
-                }
-                if (operator) {
-                  result.innerHTML = button[i].innerHTML;
-                } else {
-                  result.innerHTML += button[i].innerHTML;
-                }
-                operator = false;
-              }
-        };
-      }
-};
+//               clicked(this);
+//                 ifOperatorThanSwap('/')
+//             } else if (button[i].innerHTML === 'x') {
+//                 clicked(this);
+//                 ifOperatorThanSwap('*');
+//               } else if (button[i].innerHTML === '+') {
+//                 clicked(this);
+//                 ifOperatorThanSwap('+');
+//               } else if (button[i].innerHTML === '-') {
+//                 clicked(this);
+//                 ifOperatorThanSwap('-');
+//               }else {
+//                 removeClicked();
+//                 if (checkIfNum(equation[equation.length - 1])) {
+//                   equation = [];
+//                   equation.push(button[i].innerHTML);
+//                   operator = true;
+//                 }else {
+//                   equation.push(button[i].innerHTML);
+//                 }
+//                 if (operator) {
+//                   result.innerHTML = button[i].innerHTML;
+//                 } else {
+//                   result.innerHTML += button[i].innerHTML;
+//                 }
+//                 operator = false;
+//               }
+//         };
+//       }
+// };
